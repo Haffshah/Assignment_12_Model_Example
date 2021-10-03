@@ -26,7 +26,7 @@ class _SecondListViewPageState extends State<SecondListViewPage> {
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(14.0)),
+                  borderRadius: BorderRadius.circular(10.0)),
               padding: EdgeInsets.all(8.0),
               width: 120.0,
               height: 80.0,

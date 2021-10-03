@@ -41,7 +41,7 @@ class ListViewWidget extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(14.0)),
+                borderRadius: BorderRadius.circular(10.0)),
             padding: EdgeInsets.all(8.0),
             width: 120.0,
             height: 80.0,
@@ -54,8 +54,8 @@ class ListViewWidget extends StatelessWidget {
                 );
               },
               leading: CircleAvatar(
-                radius: 20.0,
-                backgroundColor: Colors.blueGrey,
+                radius: 30.0,
+                backgroundColor: Colors.white70,
                 backgroundImage: AssetImage(myList[index].image ?? " "),
               ),
               title: Text(

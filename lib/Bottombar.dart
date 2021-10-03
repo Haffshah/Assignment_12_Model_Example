@@ -29,7 +29,7 @@ class _BottombarScreenState extends State<BottombarScreen> {
           selectedFontSize: 15.0,
           iconSize: 25.0,
 
-          showUnselectedLabels: false,unselectedItemColor: Color(0xff616161),
+          showUnselectedLabels: false,unselectedItemColor: Color(0xffbab3b3),
           selectedItemColor: Color(0xffF6B042),
           backgroundColor: Color(0xff533549),
           currentIndex: _currentIndex,
@@ -40,9 +40,9 @@ class _BottombarScreenState extends State<BottombarScreen> {
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.list_alt_rounded), label: 'List 1'),
+                icon: Icon(Icons.person), label: 'Students Profile'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.list_alt), label: 'List 2'),
+                icon: Icon(Icons.fastfood_outlined), label: 'Food Menu'),
           ]),
       body: tabList[_currentIndex],
     );
