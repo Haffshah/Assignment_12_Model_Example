@@ -1,6 +1,7 @@
 import 'package:assignment12/Model/ModelData.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:photo_view/photo_view.dart';
 
 class DetailsTabPage extends StatefulWidget {
   final String index;
@@ -22,6 +23,10 @@ class DetailsTabPage extends StatefulWidget {
 }
 
 class _DetailsTabPageState extends State<DetailsTabPage> {
+
+
+
+
   List<ModelData> myList = arrayofData();
   @override
   Widget build(BuildContext context) {
@@ -35,7 +40,7 @@ class _DetailsTabPageState extends State<DetailsTabPage> {
           SizedBox(
             width: 20.0,
           ),
-          InkWell(onTap: (){},child: Icon(Icons.zoom_out_map)),
+        
           SizedBox(
             width: 20.0,
           )
@@ -49,9 +54,10 @@ class _DetailsTabPageState extends State<DetailsTabPage> {
             child: Hero(
               transitionOnUserGestures: true,
               tag: widget.index,
-              child: Image.asset(
-                widget.image,
-                fit: BoxFit.cover,
+              child:  PhotoView(
+                imageProvider: AssetImage(widget.image,
+                  // fit: BoxFit.cover,
+                  ),
               ),
             ),
           ),
