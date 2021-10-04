@@ -60,7 +60,7 @@ class _DetailsTabPageState extends State<DetailsTabPage> {
             padding: const EdgeInsets.all(8.0),
             child: Card(
               color: Colors.black,
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(7.0),
               elevation: 12.0,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16)),
@@ -92,8 +92,17 @@ class _DetailsTabPageState extends State<DetailsTabPage> {
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(height: 15),
-                  ],
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(style: TextButton.styleFrom(primary: Color(0xffF6B042)),
+                          onPressed: (){}, child: Text("Place Order", style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,))),
+                      ],
+                    )
+,                  ],
                 ),
               ),
             ),

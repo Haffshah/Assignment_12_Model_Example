@@ -65,7 +65,7 @@ class GridViewWidget extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(8.0, 10.0, 8.0, 10.0),
                 child: Image.asset(
                   myList[index].image ?? "",
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
               child: Container(
