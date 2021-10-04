@@ -40,17 +40,12 @@ class ListViewWidget extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Container(
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0)),
-            padding: EdgeInsets.all(8.0),
-            width: 120.0,
-            height: 80.0,
+                color: Colors.white, borderRadius: BorderRadius.circular(10.0)),
             child: ListTile(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => FirstGridViewList()),
+                  MaterialPageRoute(builder: (context) => FirstGridViewList()),
                 );
               },
               leading: CircleAvatar(

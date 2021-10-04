@@ -1,3 +1,4 @@
+import 'package:assignment12/Details.dart';
 import 'package:assignment12/Model/FoodModel.dart';
 import 'package:flutter/material.dart';
 
@@ -42,37 +43,53 @@ class GridViewWidget extends StatelessWidget {
           maxCrossAxisExtent: 300),
       itemCount: myList.length,
       itemBuilder: (ctx, index) {
-        return Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: GridTile(
-            header: Padding(
-              padding: const EdgeInsets.fromLTRB(8.0, 50.0, 8.0, 10.0),
-              child: Image.asset(
-                myList[index].image ?? "",
-                fit: BoxFit.contain,
+        return InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DetailsTabPage(
+                  image: myList[index].image ?? "",
+                  title: myList[index].title ?? "",
+                  description: myList[index].description ?? " ",
+                  index: "$index",
+                  price: myList[index].price ?? "",
+                ),
               ),
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(14.0)),
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                myList[index].title ?? "",
-                style: TextStyle(color: Colors.white, fontSize: 16.0),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: GridTile(
+              header: Padding(
+                padding: const EdgeInsets.fromLTRB(8.0, 10.0, 8.0, 10.0),
+                child: Image.asset(
+                  myList[index].image ?? "",
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            footer: Container(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(14.0)),
+                padding: EdgeInsets.fromLTRB(8.0, 150.0, 8.0, 10.0),
                 child: Text(
-                  myList[index].price ?? "",
+                  myList[index].title ?? "",
                   style: TextStyle(color: Colors.white, fontSize: 16.0),
                 ),
               ),
-              decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(14.0)),
+              footer: Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    myList[index].price ?? "",
+                    style: TextStyle(color: Colors.white, fontSize: 16.0),
+                  ),
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(14.0)),
+              ),
             ),
           ),
         );
