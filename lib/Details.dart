@@ -40,7 +40,7 @@ class _DetailsTabPageState extends State<DetailsTabPage> {
           SizedBox(
             width: 20.0,
           ),
-        
+
           SizedBox(
             width: 20.0,
           )

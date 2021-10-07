@@ -22,7 +22,7 @@ class _SecondListViewPageState extends State<SecondListViewPage> {
         itemCount: myList.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.fromLTRB(8.0,10.0,8.0,0),
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.white,

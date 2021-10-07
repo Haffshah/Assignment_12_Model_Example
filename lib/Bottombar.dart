@@ -18,9 +18,10 @@ class _BottombarScreenState extends State<BottombarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor:Color(0xff292826),
       appBar: AppBar(
-        backgroundColor:  Color(0xff533549),
+        centerTitle: true,
+        backgroundColor: Color(0xff292826),
         title: Text('List Tile Screen'),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -31,7 +32,7 @@ class _BottombarScreenState extends State<BottombarScreen> {
 
           showUnselectedLabels: false,unselectedItemColor: Color(0xffbab3b3),
           selectedItemColor: Color(0xffF6B042),
-          backgroundColor: Color(0xff533549),
+          backgroundColor: Colors.black,
           currentIndex: _currentIndex,
           onTap: (value) {
             setState(() {
